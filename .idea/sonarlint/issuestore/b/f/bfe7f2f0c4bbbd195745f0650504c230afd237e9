@@ -1,0 +1,7 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(îª˜µûÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Àãşüÿÿÿÿ
+<
+java:S1452 "&Remove usage of generic wildcard type.(—­è€
+A
+java:S14522"&Remove usage of generic wildcard type.(§§‰˜ıÿÿÿÿ
