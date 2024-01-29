@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestHeader;
 
 import javax.validation.Valid;
 @RibbonClient(name="zuul")
-@FeignClient(name = "zuul", url = "http://localhost:8765")
+@FeignClient(name = "zuul", url = "http://zuul-ms:8765")
 public interface userAuthenticationFeign {
 
     @GetMapping("/authentication-ms/api/test/admin")
-    String adminAccess(@RequestHeader(value = "Authorization", required = true) HttpHeaders authorizationHeader);
+    Boolean adminAccess(@RequestHeader(value = "Authorization", required = true) HttpHeaders authorizationHeader);
     @GetMapping("/authentication-ms/api/test/auth")
     String authTest();
     @PostMapping("/authentication-ms/api/auth/signin")

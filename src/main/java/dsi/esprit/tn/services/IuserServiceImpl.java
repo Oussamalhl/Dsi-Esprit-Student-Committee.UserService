@@ -7,6 +7,8 @@ import java.util.List;
 public interface IuserServiceImpl {
 
     User addUser(User user);
+    void deleteUser(long idUser);
+    User updateUser(User user);
     List<User> showAllUsers();
-    User showUser(Long id);
+    User showUser(Long idUser);
 }

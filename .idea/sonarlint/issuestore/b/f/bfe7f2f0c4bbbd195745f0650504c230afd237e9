@@ -1,7 +1,27 @@
 
-g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(îª˜µûÿÿÿÿ
+|
+java:S1192X"ZDefine a constant instead of duplicating this literal "Error: Role is not found." 4 times.(ÉÿÊ–ùÿÿÿÿ8ÒÛÍ¯Õ1
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(îª˜µûÿÿÿÿ
+G
+java:S5411B"*Use the primitive boolean expression here.(‡Ö…²8İİÑ¯Õ1
+G
+java:S5411H"*Use the primitive boolean expression here.(Œ‰ÓŒ8İİÑ¯Õ1
+A
+java:S5411’"*Use the primitive boolean expression here.(ôÊ˜û
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Àãşüÿÿÿÿ
 <
-java:S1452 "&Remove usage of generic wildcard type.(—­è€
+java:S1452<"&Remove usage of generic wildcard type.(—­è€
 A
-java:S14522"&Remove usage of generic wildcard type.(§§‰˜ıÿÿÿÿ
+java:S1452A"&Remove usage of generic wildcard type.(éã°éúÿÿÿÿ
+B
+java:S1452"&Remove usage of generic wildcard type.(§§‰˜ıÿÿÿÿ
+=
+java:S1452"&Remove usage of generic wildcard type.(‰Îê
+B
+java:S1452¤"&Remove usage of generic wildcard type.(½¾œúûÿÿÿÿ
+B
+java:S1452ª"&Remove usage of generic wildcard type.(€’‹¦ùÿÿÿÿ
+\
+java:S4684±"@Replace this persistent entity with a simple POJO or DTO object.(²¶é„şÿÿÿÿ
+I
+java:S1452±"&Remove usage of generic wildcard type.(²¶é„şÿÿÿÿ8¨İÍ¯Õ1
