@@ -1,5 +1,8 @@
 
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÿ¤ŠÇ
-X	java:S1254"<This block of commented-out lines of code should be removed.(Çèâ8³Îæ—Ñ1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÿ¤ŠÇ8³ý¦ïØ1
+D
+java:S19483"'Make "roles" transient or serializable.(ÁÀö»8ß‡¹ðØ1
+X	java:S1256"<This block of commented-out lines of code should be removed.(Çèâ8à¸§ïØ1
+]	java:S125<"<This block of commented-out lines of code should be removed.(½¥²úÿÿÿÿ8Áý¦ïØ1
 M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Îê—Ñ1
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ä‡¹ðØ1

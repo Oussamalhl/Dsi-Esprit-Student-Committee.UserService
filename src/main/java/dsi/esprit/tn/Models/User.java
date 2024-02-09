@@ -1,5 +1,6 @@
 package dsi.esprit.tn.Models;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -24,7 +25,7 @@ import javax.validation.constraints.Size;
       @UniqueConstraint(columnNames = "username"),
       @UniqueConstraint(columnNames = "email") 
     })
-public class User {
+public class User implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -33,6 +34,7 @@ public class User {
   @Size(max = 20)
   private String username;
 
+  private Boolean sexe;
   @NotBlank
   @Size(max = 50)
   @Email
@@ -51,10 +53,23 @@ public class User {
 //  @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
 //  List<Reclamation> reclamations;
 
-  public User(String username, String email, String password) {
+//  @ManyToMany(fetch = FetchType.LAZY)
+//  @JoinTable(name = "user_clubs_events",
+//          joinColumns = @JoinColumn(name = "user_id"),
+//          inverseJoinColumns = @JoinColumn(name = "club_id"))
+//  private Set<Club> clubs = new HashSet<>();
+//
+//  @ManyToMany(fetch = FetchType.LAZY)
+//  @JoinTable(name = "user_clubs_events",
+//          joinColumns = @JoinColumn(name = "user_id"),
+//          inverseJoinColumns = @JoinColumn(name = "event_id"))
+//  private Set<Event> events = new HashSet<>();
+
+  public User(String username, String email, String password, Boolean sexe) {
     this.username = username;
     this.email = email;
     this.password = password;
+    this.sexe = sexe;
   }
 }
 

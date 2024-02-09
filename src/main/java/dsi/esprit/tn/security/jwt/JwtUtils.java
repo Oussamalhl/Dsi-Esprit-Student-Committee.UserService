@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.security.Key;
+import java.util.Arrays;
+import java.util.List;
 
 @Component
 public class JwtUtils {
@@ -29,8 +31,8 @@ public class JwtUtils {
   }
 
   public String getUserNameFromJwtToken(String token) {
-    return Jwts.parserBuilder().setSigningKey(key()).build()
-               .parseClaimsJws(token).getBody().getSubject();
+    return Arrays.asList(Jwts.parserBuilder().setSigningKey(key()).build()
+            .parseClaimsJws(token).getBody().getSubject().split(",",-1)).get(0);
   }
 
   public boolean validateJwtToken(String authToken) {
