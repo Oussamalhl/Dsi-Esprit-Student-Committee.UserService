@@ -1,6 +1,7 @@
 package dsi.esprit.tn.Models;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -40,6 +41,8 @@ public class User implements Serializable {
   @Email
   private String email;
 
+  @Temporal(TemporalType.DATE)
+  private Date date;
   @NotBlank
   @Size(max = 120)
   private String password;
@@ -50,20 +53,22 @@ public class User implements Serializable {
           inverseJoinColumns = @JoinColumn(name = "role_id"))
   private Set<Role> roles = new HashSet<>();
 
-//  @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-//  List<Reclamation> reclamations;
+  @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+  List<Reclamation> reclamations;
 
-//  @ManyToMany(fetch = FetchType.LAZY)
-//  @JoinTable(name = "user_clubs_events",
-//          joinColumns = @JoinColumn(name = "user_id"),
-//          inverseJoinColumns = @JoinColumn(name = "club_id"))
-//  private Set<Club> clubs = new HashSet<>();
-//
-//  @ManyToMany(fetch = FetchType.LAZY)
-//  @JoinTable(name = "user_clubs_events",
-//          joinColumns = @JoinColumn(name = "user_id"),
-//          inverseJoinColumns = @JoinColumn(name = "event_id"))
-//  private Set<Event> events = new HashSet<>();
+  @ManyToOne(fetch = FetchType.LAZY)
+  private Club club;
+  @ManyToMany(fetch = FetchType.LAZY)
+  @JoinTable(name = "user_clubs_events",
+          joinColumns = @JoinColumn(name = "user_id"),
+          inverseJoinColumns = @JoinColumn(name = "club_id"))
+  private Set<Club> clubs = new HashSet<>();
+
+  @ManyToMany(fetch = FetchType.LAZY)
+  @JoinTable(name = "user_events",
+          joinColumns = @JoinColumn(name = "user_id"),
+          inverseJoinColumns = @JoinColumn(name = "event_id"))
+  private Set<Event> events = new HashSet<>();
 
   public User(String username, String email, String password, Boolean sexe) {
     this.username = username;

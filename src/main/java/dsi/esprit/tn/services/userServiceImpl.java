@@ -44,9 +44,10 @@ public class userServiceImpl implements IuserServiceImpl{
                 encoder.encode(signupRequest.getPassword()),signupRequest.getSexe());
 
         Set<Role> roles = new HashSet<>();
-        roles.add(new Role (ERole.ROLE_USER));
+        Role userRole = roleRepository.findByName(ERole.ROLE_USER)
+                .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
+        roles.add(userRole);
         user.setRoles(roles);
-        user.setPassword(encoder.encode(user.getPassword()));
         userRepository.save(user);
 
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
@@ -85,7 +86,6 @@ public class userServiceImpl implements IuserServiceImpl{
 
         user.setRoles(roles);
         user.setPassword(encoder.encode(user.getPassword()));
-        userRepository.save(user);
         return userRepository.save(user);
     }
     @Override

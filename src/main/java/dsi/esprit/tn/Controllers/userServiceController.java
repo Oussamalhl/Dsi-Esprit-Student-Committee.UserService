@@ -3,9 +3,7 @@ package dsi.esprit.tn.Controllers;
 import dsi.esprit.tn.Models.ERole;
 import dsi.esprit.tn.Models.Role;
 import dsi.esprit.tn.Models.User;
-import dsi.esprit.tn.Payload.Request.LoginRequest;
 import dsi.esprit.tn.Payload.Request.SignupRequest;
-import dsi.esprit.tn.Payload.Response.MessageResponse;
 import dsi.esprit.tn.repository.RoleRepository;
 import dsi.esprit.tn.repository.UserRepository;
 import dsi.esprit.tn.services.IuserServiceImpl;
@@ -19,8 +17,6 @@ import javax.validation.Valid;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import java.util.HashSet;
-import java.util.Set;
 
 
 @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600, allowCredentials="true")
@@ -55,11 +51,6 @@ public class userServiceController {
     public String authTest() {
         return userAuthenticationFeign.authTest();
     }
-
-//    @PostMapping("/auth/signin")
-//    public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest){
-//        return userAuthenticationFeign.authenticateUser(loginRequest);
-//    }
 
     @PostMapping("/auth/signup")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {

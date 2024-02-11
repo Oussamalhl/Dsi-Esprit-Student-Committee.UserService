@@ -1,8 +1,8 @@
 
-
-java:S3305"]Inject this field value directly into "authenticationProvider", the only method that uses it.(ñÊ®¤ùÿÿÿÿ8¦®ğØ1
-]	java:S1251"<This block of commented-out lines of code should be removed.(­¼èÿÿÿÿÿ8•¦®ğØ1
-]	java:S125A"<This block of commented-out lines of code should be removed.(ı£ËÚùÿÿÿÿ8™¦®ğØ1
-]	java:S125\"<This block of commented-out lines of code should be removed.(ıàÛŸüÿÿÿÿ8¨¦®ğØ1
-n
-java:S1128"QRemove this unused import 'org.springframework.security.web.SecurityFilterChain'.(Ï×ÜÌ8Ü¦®ğØ1
+x
+java:S3305"]Inject this field value directly into "authenticationProvider", the only method that uses it.(ñÊ®¤ùÿÿÿÿ
+V	java:S1251"<This block of commented-out lines of code should be removed.(­¼èÿÿÿÿÿ
+V	java:S125A"<This block of commented-out lines of code should be removed.(ı£ËÚùÿÿÿÿ
+V	java:S125\"<This block of commented-out lines of code should be removed.(ıàÛŸüÿÿÿÿ
+g
+java:S1128"QRemove this unused import 'org.springframework.security.web.SecurityFilterChain'.(Ï×ÜÌ
