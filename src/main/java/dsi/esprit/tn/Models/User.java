@@ -32,8 +32,14 @@ public class User implements Serializable {
   private Long id;
 
   @NotBlank
-  @Size(max = 20)
+  @Size(max = 30)
   private String username;
+  @NotBlank
+  @Size(max = 30)
+  private String firstName;
+  @NotBlank
+  @Size(max = 30)
+  private String lastName;
 
   private Boolean sexe;
   @NotBlank
@@ -70,8 +76,10 @@ public class User implements Serializable {
 //          inverseJoinColumns = @JoinColumn(name = "event_id"))
 //  private Set<Event> events = new HashSet<>();
 
-  public User(String username, String email, String password, Boolean sexe) {
+  public User(String username,String firstName,String lastName, String email, Boolean sexe,String password) {
     this.username = username;
+    this.firstName = firstName;
+    this.lastName = lastName;
     this.email = email;
     this.password = password;
     this.sexe = sexe;

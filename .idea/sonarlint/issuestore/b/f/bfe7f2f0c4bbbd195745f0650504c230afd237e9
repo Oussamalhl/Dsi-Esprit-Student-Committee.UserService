@@ -1,0 +1,21 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(îª˜µûÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Àãşüÿÿÿÿ
+A
+java:S14528"&Remove usage of generic wildcard type.(éã°éúÿÿÿÿ
+[
+java:S4684T"@Replace this persistent entity with a simple POJO or DTO object.(êà‚…ûÿÿÿÿ
+<
+java:S1452Z"&Remove usage of generic wildcard type.(‰Îê
+A
+java:S1452a"&Remove usage of generic wildcard type.(½¾œúûÿÿÿÿ
+A
+java:S1452g"&Remove usage of generic wildcard type.(€’‹¦ùÿÿÿÿ
+[
+java:S4684n"@Replace this persistent entity with a simple POJO or DTO object.(²¶é„şÿÿÿÿ
+A
+java:S1452n"&Remove usage of generic wildcard type.(²¶é„şÿÿÿÿ
+M
+java:S1128"7Remove this unused import 'dsi.esprit.tn.Models.ERole'.(ê§°®
+Q
+java:S1128"6Remove this unused import 'dsi.esprit.tn.Models.Role'.( ¯ĞØüÿÿÿÿ

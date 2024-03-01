@@ -40,8 +40,11 @@ public class userServiceImpl implements IuserServiceImpl{
 
         // Create new user's account
         User user = new User(signupRequest.getUsername(),
+                signupRequest.getFirstName(),
+                signupRequest.getLastName(),
                 signupRequest.getEmail(),
-                encoder.encode(signupRequest.getPassword()),signupRequest.getSexe());
+                signupRequest.getSexe(),
+                encoder.encode(signupRequest.getPassword()));
 
         Set<Role> roles = new HashSet<>();
         Role userRole = roleRepository.findByName(ERole.ROLE_USER)

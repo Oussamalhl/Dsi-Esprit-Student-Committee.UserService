@@ -80,7 +80,7 @@ public class userServiceController {
     }
 
     @PostMapping("/addUser")
-    //@PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public User addUser(@Valid@RequestBody User user){
         return userservice.addUser(user);
     }
