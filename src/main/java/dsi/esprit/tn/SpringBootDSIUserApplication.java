@@ -11,9 +11,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableFeignClients("dsi.esprit.tn")
 @EnableDiscoveryClient
 @EnableJpaRepositories(basePackages = { "dsi.esprit.tn.repository" })
-@ComponentScan(basePackages = { "dsi.esprit.tn.*"})
+//@ComponentScan(basePackages = { "dsi.esprit.tn.*"})
 @EntityScan("dsi.esprit.tn.Models")
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication
 public class SpringBootDSIUserApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootDSIUserApplication.class, args);

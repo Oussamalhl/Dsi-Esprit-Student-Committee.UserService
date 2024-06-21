@@ -97,7 +97,7 @@ public class userServiceImpl implements IuserServiceImpl{
     }
     @Override
     public User updateUser(User user){
-        return userRepository.save(user);
+        return this.addUser(user);
     }
     @Override
     public List<User> showAllUsers() {

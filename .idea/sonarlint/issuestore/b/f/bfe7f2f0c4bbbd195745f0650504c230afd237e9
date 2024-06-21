@@ -9,7 +9,7 @@ java:S4684["@Replace this persistent entity with a simple POJO or DTO object.(ê
 java:S1452a"&Remove usage of generic wildcard type.(‰žÎê
 U
 java:S4684x"@Replace this persistent entity with a simple POJO or DTO object.(îéÚ
-T
-java:S1128"7Remove this unused import 'dsi.esprit.tn.Models.ERole'.(ê§°®8ÓŠ¥¦à1
-X
-java:S1128"6Remove this unused import 'dsi.esprit.tn.Models.Role'.( ¯ÐØüÿÿÿÿ8ÓŠ¥¦à1
+M
+java:S1128"7Remove this unused import 'dsi.esprit.tn.Models.ERole'.(ê§°®
+Q
+java:S1128"6Remove this unused import 'dsi.esprit.tn.Models.Role'.( ¯ÐØüÿÿÿÿ
