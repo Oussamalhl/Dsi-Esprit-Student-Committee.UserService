@@ -8,7 +8,19 @@ on:
 jobs:
  project-build:
     runs-on: ubuntu-latest
-
+    services:
+      mysql:
+        image: mysql:8
+        env:
+          MYSQL_DATABASE: root
+          MYSQL_ROOT_PASSWORD: 123456
+        options: >-
+          --health-cmd mysqladmin ping
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+        - 3306:3306
     steps:
       - uses: actions/checkout@v3
 
@@ -24,7 +36,8 @@ jobs:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
-
+      - name: unit tests
+        run: mvn -B test --file pom.xml
       - name: Install Maven dependencies
         run: mvn install
       - name: Run tests
