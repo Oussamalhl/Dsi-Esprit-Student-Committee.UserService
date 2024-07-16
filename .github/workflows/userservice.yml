@@ -12,7 +12,7 @@ jobs:
       mysql:
         image: mysql:8
         env:
-          MYSQL_DATABASE: root
+          MYSQL_DATABASE: dsi_db
           MYSQL_ROOT_PASSWORD: 123456
         ports:
         - 3306:3306
