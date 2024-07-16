@@ -38,9 +38,9 @@ jobs:
       - name: Run tests
         run: mvn --batch-mode --update-snapshots verify
       - name: Test Report
-      uses: actions/upload-artifact@v3
-      if: success() || failure()
-      with:
+        uses: actions/upload-artifact@v3
+        if: success() || failure()
+        with:
           name: SpringBoot Report               # Name of the folder
           path: target/site/serenity/           # Path to test results
 
